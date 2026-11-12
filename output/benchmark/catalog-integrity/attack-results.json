@@ -1,0 +1,51 @@
+{
+  "postgresql": "17.11 (Debian 17.11-1.pgdg13+2)",
+  "corpus": "Song Describer",
+  "model": "logistic-v1-5da5509dd9e2d9cd",
+  "queued_intended_use": {
+    "control_ads": {
+      "status": "completed",
+      "report_issued": true,
+      "ciphertext_cleared": true,
+      "signature_verified": true,
+      "recognition": "match",
+      "policy_outcome": "restricted",
+      "catalog_digest": "7cc60b708fd34234e8fce24225395365c0b0270f1059136125fd67b27ae3855b"
+    },
+    "edited_to_campus": {
+      "status": "failed",
+      "report_issued": false,
+      "ciphertext_cleared": true,
+      "error": "Queued request or catalog integrity verification failed"
+    }
+  },
+  "catalog_posting_replacement": {
+    "original_count": 4986,
+    "modified_count": 4986,
+    "unverified_live_lookup": "match",
+    "before_edit": {
+      "status": "completed",
+      "report_issued": true,
+      "ciphertext_cleared": true,
+      "signature_verified": true,
+      "recognition": "no_match",
+      "policy_outcome": "not_evaluated",
+      "catalog_digest": "7cc60b708fd34234e8fce24225395365c0b0270f1059136125fd67b27ae3855b"
+    },
+    "warm_worker": {
+      "status": "completed",
+      "report_issued": true,
+      "ciphertext_cleared": true,
+      "signature_verified": true,
+      "recognition": "no_match",
+      "policy_outcome": "not_evaluated",
+      "catalog_digest": "7cc60b708fd34234e8fce24225395365c0b0270f1059136125fd67b27ae3855b"
+    },
+    "cold_worker": {
+      "status": "failed",
+      "report_issued": false,
+      "ciphertext_cleared": true,
+      "error": "Queued request or catalog integrity verification failed"
+    }
+  }
+}

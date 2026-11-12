@@ -1,0 +1,185 @@
+{
+  "payload": {
+    "report_id": "23027fdc-a665-487d-9ffb-74bd6dbfe56b",
+    "tenant_id": "broadcast-fixture",
+    "media_sha256": "d9da929bfdf7d16ce89f3b97f1e41376e045efb24c64170f3b6bd1f1f4a54dd1",
+    "cue_sheet_sha256": "2339e076947aeee7c537ea890bd29395c1e8f6de35ebe07c01506e47ee5aaa30",
+    "request_sha256": "61dd1e453f4a0c57796cbd60c2a9ab1821400f32815af69cd87b47f639f12086",
+    "programme_id": "generated-show",
+    "origin_ms": 120000,
+    "duration_ms": 53000,
+    "catalog_digest": "af3c6f3d44ce09be740a41009218472816ca6a3a4d0975a9817bc3d46167c2f2",
+    "fingerprint_version": "landmark-v1",
+    "scoring_version": "logistic-v1-5da5509dd9e2d9cd",
+    "threshold": 0.94,
+    "review_threshold": 0.82,
+    "tie_margin": 0.04,
+    "tolerance_ms": 600,
+    "evaluated_at": "2026-11-12T16:39:55+00:00",
+    "findings": [
+      {
+        "status": "confirmed",
+        "reason": "within_timing_tolerance",
+        "cue_id": "first",
+        "recording_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "declared_start_ms": 123000,
+        "declared_end_ms": 131000,
+        "detected_start_ms": 123053,
+        "detected_end_ms": 130670,
+        "match_evidence": {
+          "reference_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+          "query_start_ms": 3053,
+          "query_end_ms": 10670,
+          "reference_start_ms": 2055,
+          "reference_end_ms": 9671,
+          "aligned_hashes": 1097,
+          "decision_score": 1.0
+        }
+      },
+      {
+        "status": "needs_review",
+        "reason": "overlapping_declaration",
+        "cue_id": "duplicate",
+        "recording_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "declared_start_ms": 123000,
+        "declared_end_ms": 131000,
+        "detected_start_ms": null,
+        "detected_end_ms": null,
+        "match_evidence": null
+      },
+      {
+        "status": "timing_mismatch",
+        "reason": "boundary_outside_tolerance",
+        "cue_id": "repeat",
+        "recording_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "declared_start_ms": 137000,
+        "declared_end_ms": 147500,
+        "detected_start_ms": 137055,
+        "detected_end_ms": 144660,
+        "match_evidence": {
+          "reference_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+          "query_start_ms": 17055,
+          "query_end_ms": 24660,
+          "reference_start_ms": 2055,
+          "reference_end_ms": 9660,
+          "aligned_hashes": 1179,
+          "decision_score": 1.0
+        }
+      },
+      {
+        "status": "needs_review",
+        "reason": "ambiguous_match",
+        "cue_id": "overlap-a",
+        "recording_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "declared_start_ms": 160000,
+        "declared_end_ms": 167000,
+        "detected_start_ms": 160020,
+        "detected_end_ms": 166660,
+        "match_evidence": {
+          "reference_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+          "query_start_ms": 40020,
+          "query_end_ms": 46660,
+          "reference_start_ms": 1022,
+          "reference_end_ms": 7663,
+          "aligned_hashes": 661,
+          "decision_score": 0.999814
+        }
+      },
+      {
+        "status": "needs_review",
+        "reason": "ambiguous_match",
+        "cue_id": "overlap-b",
+        "recording_id": "3aa35236-2d30-4dd1-885d-d68b378cbbcf",
+        "declared_start_ms": 160000,
+        "declared_end_ms": 167000,
+        "detected_start_ms": 160054,
+        "detected_end_ms": 166660,
+        "match_evidence": {
+          "reference_id": "3aa35236-2d30-4dd1-885d-d68b378cbbcf",
+          "query_start_ms": 40054,
+          "query_end_ms": 46660,
+          "reference_start_ms": 1057,
+          "reference_end_ms": 7663,
+          "aligned_hashes": 663,
+          "decision_score": 0.999791
+        }
+      },
+      {
+        "status": "declared_without_evidence",
+        "reason": "no_reliable_match",
+        "cue_id": "absent",
+        "recording_id": "569830f6-ca97-43c5-b0c0-3be7193c05b5",
+        "declared_start_ms": 169000,
+        "declared_end_ms": 171000,
+        "detected_start_ms": null,
+        "detected_end_ms": null,
+        "match_evidence": null
+      },
+      {
+        "status": "needs_review",
+        "reason": "recording_not_in_catalog",
+        "cue_id": "unknown",
+        "recording_id": "outside-catalog",
+        "declared_start_ms": 170000,
+        "declared_end_ms": 172000,
+        "detected_start_ms": null,
+        "detected_end_ms": null,
+        "match_evidence": null
+      },
+      {
+        "status": "needs_review",
+        "reason": "outside_excerpt",
+        "cue_id": "outside",
+        "recording_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "declared_start_ms": 115000,
+        "declared_end_ms": 119000,
+        "detected_start_ms": null,
+        "detected_end_ms": null,
+        "match_evidence": null
+      },
+      {
+        "status": "detected_unlisted",
+        "reason": "no_matching_declaration",
+        "cue_id": null,
+        "recording_id": "3aa35236-2d30-4dd1-885d-d68b378cbbcf",
+        "declared_start_ms": null,
+        "declared_end_ms": null,
+        "detected_start_ms": 148050,
+        "detected_end_ms": 155666,
+        "match_evidence": {
+          "reference_id": "3aa35236-2d30-4dd1-885d-d68b378cbbcf",
+          "query_start_ms": 28050,
+          "query_end_ms": 35666,
+          "reference_start_ms": 2055,
+          "reference_end_ms": 9671,
+          "aligned_hashes": 695,
+          "decision_score": 1.0
+        }
+      }
+    ],
+    "uncertain_intervals": [
+      {
+        "reference_id": "b80c48c8-ef1b-47a5-8c13-95191d5fd139",
+        "query_start_ms": 40020,
+        "query_end_ms": 46660,
+        "reference_start_ms": 1022,
+        "reference_end_ms": 7663,
+        "aligned_hashes": 661,
+        "decision_score": 0.999814
+      },
+      {
+        "reference_id": "3aa35236-2d30-4dd1-885d-d68b378cbbcf",
+        "query_start_ms": 40054,
+        "query_end_ms": 46660,
+        "reference_start_ms": 1057,
+        "reference_end_ms": 7663,
+        "aligned_hashes": 663,
+        "decision_score": 0.999791
+      }
+    ],
+    "schema_version": 1,
+    "record_type": "music_usage_audit",
+    "key_id": "899769ce0fe6a57c3f5b1af7032aaac0ac1f9eedf4d137833228c3a327343d2e"
+  },
+  "signature": "s+qWgAZexDStGwC7YYVG9jpH3q5Btn1j1ddRK5B6iZgZFv1Ife+qawOoyiQ6c9EmXiwR11IuKwlMDBm9FN0yAQ=="
+}

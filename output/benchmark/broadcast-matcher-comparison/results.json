@@ -1,0 +1,740 @@
+{
+  "ground_truth": [
+    {
+      "clip": "broadcast",
+      "recording": "a",
+      "start_ms": 3000,
+      "end_ms": 11000
+    },
+    {
+      "clip": "broadcast",
+      "recording": "a",
+      "start_ms": 17000,
+      "end_ms": 25000
+    },
+    {
+      "clip": "broadcast",
+      "recording": "b",
+      "start_ms": 28000,
+      "end_ms": 36000
+    },
+    {
+      "clip": "broadcast",
+      "recording": "a",
+      "start_ms": 40000,
+      "end_ms": 47000
+    },
+    {
+      "clip": "broadcast",
+      "recording": "b",
+      "start_ms": 40000,
+      "end_ms": 47000
+    },
+    {
+      "clip": "short-and-masked",
+      "recording": "b",
+      "start_ms": 6000,
+      "end_ms": 14000
+    },
+    {
+      "clip": "short-and-masked",
+      "recording": "a",
+      "start_ms": 24000,
+      "end_ms": 32000
+    },
+    {
+      "clip": "short-and-masked",
+      "recording": "c",
+      "start_ms": 34000,
+      "end_ms": 37000
+    }
+  ],
+  "minimum_iou": 0.5,
+  "fixture_sha256": {
+    "reference-a.wav": "6a8fd541f4c8e45118a2cbfbb683c666ba4c950ebf2230d8a5aecd901f13d77d",
+    "reference-b.wav": "8ef1f11f6e39f492df9a86cf0d1f9e11ef677ec9f898f373b94756c5c64b44c5",
+    "reference-c.wav": "8e901d97636bf550a2971e142080e20e2ca6c0e8c9ba2492274a1fb97de74db1",
+    "broadcast.wav": "d9da929bfdf7d16ce89f3b97f1e41376e045efb24c64170f3b6bd1f1f4a54dd1",
+    "short-and-masked.wav": "78e9214f6854db24bf1e8634ef9b0fec0b880ba0390c736fd1d2fc68df048e38",
+    "out-of-catalog.wav": "cb525a2ca69056873fdade816ddc98c4183a78b429e1cc0b136783361ff9d5c4",
+    "silence.wav": "1cf9edae438c4fd9c0fc67ac35bfce88fd1256fabd618149412e59c9693a9954"
+  },
+  "secure_audio_model": {
+    "version": "logistic-v1-5da5509dd9e2d9cd",
+    "threshold": 0.94,
+    "review_threshold": 0.82
+  },
+  "peakfp": {
+    "commit": "365df239bae4cea155232f09e1ca3b6b98a060c3",
+    "peak_distance": 5,
+    "threshold": 5,
+    "window_frames": 600,
+    "hop_frames": 300,
+    "empty_fingerprint_queries": [
+      "silence"
+    ]
+  },
+  "panako": {
+    "release": "v2.1.0",
+    "jar_sha256": "767cdd2cd0991658c4a25a0b8e887f9a2a38f69ae17781b02fe1652e1a7173d4",
+    "configuration": {
+      "STRATEGY": "PANAKO",
+      "PANAKO_SAMPLE_RATE": 8000,
+      "PANAKO_AUDIO_BLOCK_SIZE": 4096,
+      "PANAKO_TRANSF_TIME_RESOLUTION": 64
+    },
+    "monitor_window_and_overlap_seconds": [
+      [
+        12,
+        6
+      ],
+      [
+        25,
+        5
+      ]
+    ],
+    "monitor_coverage_seconds_per_53_second_clip": {
+      "12-6": 48,
+      "25-5": 45
+    },
+    "merge_offset_tolerance_ms": 250
+  },
+  "results": {
+    "secure-audio": {
+      "confirmed_count": 6,
+      "matched_count": 6,
+      "missed_count": 2,
+      "false_alert_count": 0,
+      "negative_false_alert_count": 0,
+      "false_alerts_overlapping_same_recording": 0,
+      "median_absolute_start_error_ms": 52.5,
+      "median_absolute_end_error_ms": 335.5,
+      "matched_timings": [
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 3000,
+            "end_ms": 11000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 3053,
+            "end_ms": 10670,
+            "offset_ms": -998
+          },
+          "iou": 0.9521,
+          "start_error_ms": 53,
+          "end_error_ms": -330
+        },
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 17000,
+            "end_ms": 25000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 17055,
+            "end_ms": 24660,
+            "offset_ms": -15000
+          },
+          "iou": 0.9506,
+          "start_error_ms": 55,
+          "end_error_ms": -340
+        },
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 28000,
+            "end_ms": 36000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 28050,
+            "end_ms": 35666,
+            "offset_ms": -25995
+          },
+          "iou": 0.952,
+          "start_error_ms": 50,
+          "end_error_ms": -334
+        },
+        {
+          "cue": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6000,
+            "end_ms": 14000
+          },
+          "prediction": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6049,
+            "end_ms": 13665,
+            "offset_ms": -4006
+          },
+          "iou": 0.952,
+          "start_error_ms": 49,
+          "end_error_ms": -335
+        },
+        {
+          "cue": {
+            "clip": "short-and-masked",
+            "recording": "a",
+            "start_ms": 24000,
+            "end_ms": 32000
+          },
+          "prediction": {
+            "clip": "short-and-masked",
+            "recording": "a",
+            "start_ms": 24056,
+            "end_ms": 31660,
+            "offset_ms": -22001
+          },
+          "iou": 0.9505,
+          "start_error_ms": 56,
+          "end_error_ms": -340
+        },
+        {
+          "cue": {
+            "clip": "short-and-masked",
+            "recording": "c",
+            "start_ms": 34000,
+            "end_ms": 37000
+          },
+          "prediction": {
+            "clip": "short-and-masked",
+            "recording": "c",
+            "start_ms": 34052,
+            "end_ms": 36664,
+            "offset_ms": -31997
+          },
+          "iou": 0.8707,
+          "start_error_ms": 52,
+          "end_error_ms": -336
+        }
+      ],
+      "missed_cues": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40000,
+          "end_ms": 47000
+        }
+      ],
+      "false_alerts": [],
+      "review_count": 2,
+      "review_candidates": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40020,
+          "end_ms": 46660,
+          "offset_ms": -38998
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40054,
+          "end_ms": 46660,
+          "offset_ms": -38997
+        }
+      ],
+      "missed_cues_with_review_candidate": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40000,
+          "end_ms": 47000
+        }
+      ]
+    },
+    "peakfp": {
+      "confirmed_count": 29,
+      "matched_count": 1,
+      "missed_count": 7,
+      "false_alert_count": 28,
+      "negative_false_alert_count": 14,
+      "false_alerts_overlapping_same_recording": 11,
+      "median_absolute_start_error_ms": 80,
+      "median_absolute_end_error_ms": 32,
+      "matched_timings": [
+        {
+          "cue": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6000,
+            "end_ms": 14000
+          },
+          "prediction": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6080,
+            "end_ms": 13968,
+            "offset_ms": -4000
+          },
+          "iou": 0.986,
+          "start_error_ms": 80,
+          "end_error_ms": -32
+        }
+      ],
+      "missed_cues": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 3000,
+          "end_ms": 11000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 17000,
+          "end_ms": 25000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 28000,
+          "end_ms": 36000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "a",
+          "start_ms": 24000,
+          "end_ms": 32000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 34000,
+          "end_ms": 37000
+        }
+      ],
+      "false_alerts": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 3072,
+          "end_ms": 3504,
+          "offset_ms": -1008
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 3504,
+          "end_ms": 3888,
+          "offset_ms": -3408
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 3888,
+          "end_ms": 6896,
+          "offset_ms": -3792
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 6896,
+          "end_ms": 19696,
+          "offset_ms": -6800
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 19696,
+          "end_ms": 33520,
+          "offset_ms": -19600
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 33520,
+          "end_ms": 33712,
+          "offset_ms": -19808
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 33712,
+          "end_ms": 43104,
+          "offset_ms": -29200
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 43104,
+          "end_ms": 46112,
+          "offset_ms": -32208
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 46112,
+          "end_ms": 46304,
+          "offset_ms": -32400
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 46304,
+          "end_ms": 46912,
+          "offset_ms": -33200
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 46912,
+          "end_ms": 46928,
+          "offset_ms": -39008
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 24080,
+          "end_ms": 24096,
+          "offset_ms": -23184
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 24096,
+          "end_ms": 36896,
+          "offset_ms": -23792
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 36896,
+          "end_ms": 36912,
+          "offset_ms": -24016
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 80,
+          "end_ms": 96,
+          "offset_ms": 1824
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "c",
+          "start_ms": 96,
+          "end_ms": 704,
+          "offset_ms": 0
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "b",
+          "start_ms": 704,
+          "end_ms": 1104,
+          "offset_ms": -608
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 1104,
+          "end_ms": 2496,
+          "offset_ms": -1008
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "b",
+          "start_ms": 2496,
+          "end_ms": 4096,
+          "offset_ms": -2400
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 4096,
+          "end_ms": 12304,
+          "offset_ms": -4000
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "c",
+          "start_ms": 12304,
+          "end_ms": 13504,
+          "offset_ms": -12208
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 13504,
+          "end_ms": 27328,
+          "offset_ms": -13408
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 27328,
+          "end_ms": 41104,
+          "offset_ms": -27184
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 41104,
+          "end_ms": 42912,
+          "offset_ms": -28992
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 42912,
+          "end_ms": 49312,
+          "offset_ms": -35392
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "a",
+          "start_ms": 49312,
+          "end_ms": 50720,
+          "offset_ms": -36800
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "c",
+          "start_ms": 50720,
+          "end_ms": 50912,
+          "offset_ms": -37008
+        },
+        {
+          "clip": "out-of-catalog",
+          "recording": "c",
+          "start_ms": 50912,
+          "end_ms": 52912,
+          "offset_ms": -39008
+        }
+      ],
+      "review_count": 0,
+      "review_candidates": [],
+      "missed_cues_with_review_candidate": []
+    },
+    "panako-12-6": {
+      "confirmed_count": 3,
+      "matched_count": 3,
+      "missed_count": 5,
+      "false_alert_count": 0,
+      "negative_false_alert_count": 0,
+      "false_alerts_overlapping_same_recording": 0,
+      "median_absolute_start_error_ms": 557,
+      "median_absolute_end_error_ms": 1387,
+      "matched_timings": [
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 3000,
+            "end_ms": 11000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "a",
+            "start_ms": 3557,
+            "end_ms": 9613,
+            "offset_ms": -752
+          },
+          "iou": 0.757,
+          "start_error_ms": 557,
+          "end_error_ms": -1387
+        },
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 28000,
+            "end_ms": 36000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 28069,
+            "end_ms": 33253,
+            "offset_ms": -25208
+          },
+          "iou": 0.648,
+          "start_error_ms": 69,
+          "end_error_ms": -2747
+        },
+        {
+          "cue": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6000,
+            "end_ms": 14000
+          },
+          "prediction": {
+            "clip": "short-and-masked",
+            "recording": "b",
+            "start_ms": 6869,
+            "end_ms": 12877,
+            "offset_ms": -4000
+          },
+          "iou": 0.751,
+          "start_error_ms": 869,
+          "end_error_ms": -1123
+        }
+      ],
+      "missed_cues": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 17000,
+          "end_ms": 25000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "a",
+          "start_ms": 24000,
+          "end_ms": 32000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 34000,
+          "end_ms": 37000
+        }
+      ],
+      "false_alerts": [],
+      "review_count": 0,
+      "review_candidates": [],
+      "missed_cues_with_review_candidate": []
+    },
+    "panako-25-5": {
+      "confirmed_count": 3,
+      "matched_count": 1,
+      "missed_count": 7,
+      "false_alert_count": 2,
+      "negative_false_alert_count": 0,
+      "false_alerts_overlapping_same_recording": 2,
+      "median_absolute_start_error_ms": 179,
+      "median_absolute_end_error_ms": 1779,
+      "matched_timings": [
+        {
+          "cue": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 28000,
+            "end_ms": 36000
+          },
+          "prediction": {
+            "clip": "broadcast",
+            "recording": "b",
+            "start_ms": 27821,
+            "end_ms": 34221,
+            "offset_ms": -24960
+          },
+          "iou": 0.7606,
+          "start_error_ms": -179,
+          "end_error_ms": -1779
+        }
+      ],
+      "missed_cues": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 3000,
+          "end_ms": 11000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 17000,
+          "end_ms": 25000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "broadcast",
+          "recording": "b",
+          "start_ms": 40000,
+          "end_ms": 47000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "b",
+          "start_ms": 6000,
+          "end_ms": 14000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "a",
+          "start_ms": 24000,
+          "end_ms": 32000
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "c",
+          "start_ms": 34000,
+          "end_ms": 37000
+        }
+      ],
+      "false_alerts": [
+        {
+          "clip": "broadcast",
+          "recording": "a",
+          "start_ms": 15533,
+          "end_ms": 20589,
+          "offset_ms": -12728
+        },
+        {
+          "clip": "short-and-masked",
+          "recording": "b",
+          "start_ms": 3549,
+          "end_ms": 9757,
+          "offset_ms": -688
+        }
+      ],
+      "review_count": 0,
+      "review_candidates": [],
+      "missed_cues_with_review_candidate": []
+    }
+  }
+}

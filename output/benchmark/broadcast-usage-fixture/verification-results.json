@@ -1,0 +1,19 @@
+{
+  "original_files": {
+    "verified": true,
+    "audio_checked": true,
+    "cue_sheet_checked": true
+  },
+  "changed_audio": {
+    "verified": false,
+    "error": "Media digest does not match the signed record"
+  },
+  "changed_csv": {
+    "verified": false,
+    "error": "Cue sheet digest does not match the signed record"
+  },
+  "changed_finding": {
+    "verified": false,
+    "error": "Invalid evidence signature or encoding"
+  }
+}
